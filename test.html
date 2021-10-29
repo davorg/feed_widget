@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>RSS Reader Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="feed_widget.js"></script>
+    <script>
+const FEEDS = [ {
+  url: `https://davecross.co.uk/2020-vision/feed.atom`,
+  desc: 'Atom test',
+}, {
+  url: 'https://davecross.co.uk/2020-vision/feed.rss',
+  desc: 'RSS test',
+} ];
+
+$(document).ready(function() {
+  make_feed_widget(FEEDS, 'feed_here');
+});
+
+    </script>
+  </head>
+  <body>
+    <h1>Feed Reader Test</h1>
+    <div id="feed_here" />
+  </body>
+</html>
